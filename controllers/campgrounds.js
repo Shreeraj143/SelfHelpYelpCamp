@@ -19,7 +19,7 @@ module.exports.index = async (req, res) => {
 };
 
 module.exports.renderNewForm = (req, res) => {
-  res.render("campgrounds/form");
+  res.render("campgrounds/new");
 };
 
 module.exports.createCampground = async (req, res) => {
