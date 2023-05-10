@@ -1,0 +1,79 @@
+<% layout('layouts/boilerplate') %>
+<div class="row">
+  <h1 class="text-center">New Campground</h1>
+  <div class="col-lg-6 offset-lg-3 mt-4">
+    <form
+      action="/campgrounds"
+      method="POST"
+      novalidate
+      class="validated-form"
+      enctype="multipart/form-data"
+    >
+      <div class="mb-3">
+        <label for="title" class="form-label">Enter Title</label>
+        <input
+          type="text"
+          name="campground[title]"
+          id="title"
+          class="form-control"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+      <div class="mb-3">
+        <label for="location" class="form-label">Enter Location</label>
+        <input
+          type="text"
+          name="campground[location]"
+          id="location"
+          class="form-control"
+          required
+        />
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea
+          type="text"
+          name="campground[description]"
+          id="description"
+          class="form-control"
+          required
+        ></textarea>
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+      <div class="mb-3">
+        <label for="price" class="form-label">Campground Price</label>
+        <div class="input-group">
+          <span class="input-group-text" id="price-label">$</span>
+          <input
+            type="text"
+            class="form-control"
+            id="price"
+            name="campground[price]"
+            placeholder="0.00"
+            aria-label="price"
+            aria-describedby="price-label"
+            required
+          />
+          <div class="valid-feedback">Looks good!</div>
+        </div>
+      </div>
+
+      <div class="input-group mb-3">
+        <input
+          type="file"
+          class="form-control"
+          id="image"
+          name="campground[images]"
+          multiple
+        />
+        <label class="input-group-text" for="image">Upload Image(s)</label>
+      </div>
+      <button class="btn btn-success mb-3">Add Campground</button>
+    </form>
+    <a href="/campgrounds">All Campgrounds</a>
+  </div>
+</div>
