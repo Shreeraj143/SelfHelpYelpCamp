@@ -98,7 +98,12 @@ const connectSrcUrls = [
   "https://events.mapbox.com/",
   "https://ka-f.fontawesome.com/",
 ];
-const fontSrcUrls = ["https://fonts.google.com/"];
+const fontSrcUrls = [
+  "https://fonts.google.com/",
+  "https://ka-f.fontawesome.com/",
+  "https://fonts.googleapis.com/",
+  "https://fonts.gstatic.com/",
+];
 app.use(
   helmet.contentSecurityPolicy({
     directives: {
@@ -140,7 +145,7 @@ app.use("/campgrounds", campgroundsRoutes);
 app.use("/campgrounds/:id/reviews", reviewsRoutes);
 
 app.get("/", (req, res) => {
-  res.render("home");
+  res.render("campgrounds/parallaxHome");
 });
 
 // FOR ALL ROUTES OTHER THAN SPECIFIED ABOVE
@@ -155,7 +160,7 @@ app.use((err, req, res, next) => {
   res.status(statusCode).render("error", { err });
 });
 
-const port = process.env.PORT || "3000";
+const port = process.env.PORT || "3012";
 
 app.listen(port, () => {
   console.log(`Serving on Port ${port}`);

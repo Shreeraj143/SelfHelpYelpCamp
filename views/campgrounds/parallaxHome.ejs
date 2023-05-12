@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SelfHelp YelpCamp</title>
+    <link rel="stylesheet" href="/stylesheets/parallaxHomePage.css" />
+    <link rel="stylesheet" href="/stylesheets/parallaxmediaqueries.css" />
+  </head>
+  <body>
+    <header class="header">
+      <section class="main-nav">
+        <section class="logo-container">
+          <a href="/" class="logo">YelpCamp</a>
+        </section>
+
+        <section class="links-container" id="links-container">
+          <ul class="navigation">
+            <li><a class="nav-links active" href="/">Home</a></li>
+            <li>
+              <a class="nav-links" href="/campgrounds">Campgrounds</a>
+            </li>
+            <% if(!currentUser) { %>
+            <li><a class="nav-links" href="/login">Login</a></li>
+            <li><a class="nav-links" href="/register">Register</a></li>
+            <% } else { %>
+            <li><a class="nav-links" href="/logout">Logout</a></li>
+            <% } %>
+          </ul>
+        </section>
+        <a href="#" class="nav-toggle nav-links" id="nav-toggle"
+          ><i class="fa-solid fa-bars"></i
+        ></a>
+      </section>
+    </header>
+
+    <section class="parallax">
+      <img src="/images/hill1.png" id="hill1" />
+      <img src="/images/hill2.png" id="hill2" />
+      <img src="/images/hill3.png" id="hill3" />
+      <img src="/images/hill4.png" id="hill4" />
+      <img src="/images/hill5.png" id="hill5" />
+      <img src="/images/tree.png" id="tree" />
+      <h2 id="title">Welcome to YelpCamp!</h2>
+      <img src="/images/leaf.png" id="leaf" />
+      <img src="/images/plant.png" id="plant" />
+    </section>
+
+    <section class="sec">
+      <div class="container">
+        <h2>Things You Can Do!</h2>
+        <div class="content">
+          <div class="card">
+            <div class="card-content">
+              <div class="name-details">
+                <span class="name">Create</span>
+                <div class="details">
+                  Know a campground that others are not aware of? Create the
+                  campground you know so others can also visit.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <div class="name-details">
+                <span class="name">Edit</span>
+                <div class="details">
+                  Made an mistake while creating campground? or Want to update
+                  campground's information? Worry not you can edit the
+                  campgrounds.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <div class="name-details">
+                <span class="name">Delete</span>
+                <div class="details">
+                  The campground stopped providing services? Don't Sweat! You
+                  can delete the campground.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-content">
+              <div class="name-details">
+                <span class="name">Review</span>
+                <div class="details">
+                  Loved a Campground? or Hated a Campground? Let others know so
+                  they can prepare. Leave reviews on campgrounds.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://kit.fontawesome.com/cf25c07412.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="/javascripts/parallaxHomePage.js"></script>
+  </body>
+</html>

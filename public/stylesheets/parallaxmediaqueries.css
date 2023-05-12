@@ -1,0 +1,45 @@
+/* Media Queries */
+/* Tablet Version */
+@media screen and (max-width: 1043px) {
+  .header {
+    padding: 1.9rem 0rem;
+    height: 50vh;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .navigation .nav-links {
+    /* display: inline-block; */
+  }
+
+  .links-container ul {
+    flex-direction: column;
+  }
+
+  .links-container.active {
+    left: 0;
+  }
+
+  .links-container {
+    position: absolute;
+    background-color: #013328;
+    left: -100%;
+    top: 120%;
+    width: 100%;
+    padding: 2rem 0rem;
+    transition: 200ms ease-in-out;
+  }
+}
+
+/* Large Mobile Version */
+@media screen and (max-width: 767px) {
+  #title {
+    font-size: 4rem;
+  }
+}
+
+/* Mobile Version */
+@media screen and (max-width: 767px) {
+}
