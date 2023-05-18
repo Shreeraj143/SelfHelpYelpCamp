@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="/stylesheets/stars.css" />
 
 <div class="row">
-  <div class="col-6">
+  <div class="col-md-6">
     <div id="campgroundImage" class="carousel slide carousel-fade">
       <div class="carousel-inner">
         <% campground.images.forEach((img, i) => { %>
@@ -70,7 +70,7 @@
       <div class="card-footer text-muted">2 days ago</div>
     </div>
   </div>
-  <div class="col-6">
+  <div class="col-md-6">
     <div id="map"></div>
     <% if(currentUser) { %>
     <h2>Leave a Review</h2>
